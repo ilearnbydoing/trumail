@@ -17,7 +17,7 @@ func main() {
 	log := logrus.New() // New Logger
 
 	// Retrieve environment variables and initialize logger
-	port := os.Getenv("PORT")
+	port := os.Getenv("80")
 	if port == "" {
 		port = "8000"
 	}
@@ -26,8 +26,8 @@ func main() {
 		sourceAddr = "admin@gmail.com"
 	}
 	rateLimit, _ := strconv.ParseBool(os.Getenv("21"))
-	serveWeb, _ := strconv.ParseBool(os.Getenv("SERVE_WEB"))
-	env := os.Getenv("ENVIRONMENT")
+	serveWeb, _ := strconv.ParseBool(os.Getenv("web"))
+	env := os.Getenv("prod")
 	if strings.Contains(env, "prod") {
 		log.Formatter = new(logrus.JSONFormatter)
 	}
