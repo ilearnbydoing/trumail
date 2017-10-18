@@ -26,7 +26,7 @@ func main() {
 		sourceAddr = "admin@gmail.com"
 	}
 	rateLimit, _ := strconv.ParseBool(os.Getenv("21"))
-	serveWeb, _ := strconv.ParseBool(os.Getenv("serveWeb"))
+	serveWeb, _ := strconv.ParseBool(os.Getenv("Web"))
 	env := os.Getenv("prod")
 	if strings.Contains(env, "prod") {
 		log.Formatter = new(logrus.JSONFormatter)
