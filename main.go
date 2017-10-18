@@ -17,17 +17,17 @@ func main() {
 	log := logrus.New() // New Logger
 
 	// Retrieve environment variables and initialize logger
-	port := os.Getenv("80")
+	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8000"
 	}
-	sourceAddr := os.Getenv(")
+	sourceAddr := os.Getenv("SOURCE_ADDR")
 	if sourceAddr == "" {
 		sourceAddr = "admin@gmail.com"
 	}
-	rateLimit, _ := strconv.ParseBool(os.Getenv("21"))
-	serveWeb, _ := strconv.ParseBool(os.Getenv("SERVEWEB"))
-	env := os.Getenv("prod")
+	rateLimit, _ := strconv.ParseBool(os.Getenv("RATE_LIMIT"))
+	serveWeb, _ := strconv.ParseBool(os.Getenv("SERVE_WEB"))
+	env := os.Getenv("ENVIRONMENT")
 	if strings.Contains(env, "prod") {
 		log.Formatter = new(logrus.JSONFormatter)
 	}
