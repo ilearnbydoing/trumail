@@ -21,7 +21,7 @@ func main() {
 	if port == "" {
 		port = "8000"
 	}
-	sourceAddr := os.Getenv("trumail.herokuapp.com")
+	sourceAddr := os.Getenv(")
 	if sourceAddr == "" {
 		sourceAddr = "admin@gmail.com"
 	}
