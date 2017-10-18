@@ -21,11 +21,11 @@ func main() {
 	if port == "" {
 		port = "8000"
 	}
-	sourceAddr := os.Getenv("SOURCE_ADDR")
+	sourceAddr := os.Getenv("trumail.herokuapp.com")
 	if sourceAddr == "" {
 		sourceAddr = "admin@gmail.com"
 	}
-	rateLimit, _ := strconv.ParseBool(os.Getenv("RATE_LIMIT"))
+	rateLimit, _ := strconv.ParseBool(os.Getenv("21"))
 	serveWeb, _ := strconv.ParseBool(os.Getenv("SERVE_WEB"))
 	env := os.Getenv("ENVIRONMENT")
 	if strings.Contains(env, "prod") {
