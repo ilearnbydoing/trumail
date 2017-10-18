@@ -1,4 +1,4 @@
-export PORT='80'
+export PORT=''
 export SERVE_WEB='true'
 export ENVIRONMENT='local'
 export RATE_LIMIT='true'
