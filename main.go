@@ -45,8 +45,6 @@ func main() {
 
 	if serveWeb {
 		// Set all remaining paths to point to static files (must come after)
-		r.HandleStatic("/web")
-		r.HandleStatic("/web/")
 		r.HandleStatic("./web")
 	}
 
